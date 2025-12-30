@@ -5,7 +5,6 @@ import Header from "../common/Header/index";
 import Section from "../common/Section";
 import Tile from "../common/Tile/index";
 import TilePortfolio from "../common/TilePortfolio/index";
-import githubIcon from "../assets/github-color.svg";
 
 function App() {
 
