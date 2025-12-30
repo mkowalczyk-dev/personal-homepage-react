@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-export const TileWrapper = styled.div`
-background-color: ${({ theme }) => theme.color.white};
-  box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
+export const TilePortfolioWrapper = styled.div`
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   grid-gap: 20px;
-  padding: 20px;
-  margin: 20px 0;
   font-size: 20px;
   max-width: 100%;
 
@@ -20,11 +16,12 @@ background-color: ${({ theme }) => theme.color.white};
     }
 `;
 
-export const TileTitle = styled.h1`
+export const TilePortfolioTitle = styled.h1`
   margin: 18px 0;
   font-size: 24px;
   font-weight: 900;
   text-align: start;
+  color: ${({ theme }) => theme.color.cornflowerBlue};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
         font-size: 16px;
@@ -36,7 +33,7 @@ export const TileTitle = styled.h1`
         margin: 5px 0;
   }`;
 
-export const TileImage = styled.div`
+export const TilePortfolioImage = styled.div`
   width: 176px;
   display: block;
   aspect-ratio: 2 / 3;
@@ -46,7 +43,7 @@ export const TileImage = styled.div`
   background-color: transparent;
   margin: 0 auto 16px auto;
   background-image: ${({ $posterUrl, $noPosterUrl }) =>
-    `url(${$posterUrl || $noPosterUrl})`};
+        `url(${$posterUrl || $noPosterUrl})`};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     aspect-ratio: 2 / 3;
@@ -65,11 +62,22 @@ export const TileImage = styled.div`
   }
 `;
 
-export const TileContainer = styled.header`
+export const TilePortfolioContainer = styled.header`
     font-size: 22px;
+    background-color: ${({ theme }) => theme.color.white};
+    box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
+    padding: 20px;
+    margin: 20px 0;
+    border-style: solid;
+    border-color: ${({ theme }) => theme.color.whisper};
+    border-width: 5px;
+
+    &:hover {
+    border-color: ${({ theme }) => theme.color.seagull};
+  }
 `
 
-export const TileName = styled.h2`
+export const TilePortfolioName = styled.h2`
   display: flex;
   text-align: center;
   justify-content: center;
@@ -88,17 +96,17 @@ export const TileName = styled.h2`
         margin: 5px 0;
   }`;
 
-export const TileList = styled.ul`
+export const TilePortfolioList = styled.ul`
 li::marker {
-    color: ${({ theme }) => theme.color.cornflowerBlue};
+    color: ${({ theme }) => theme.color.blue};
   }
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   text-align: start;
   justify-content: center;
-  list-style: disc;
+  list-style: none;
   margin-left: 0;
-  padding-left: 20px;
+  padding-left: 0px;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.3;
@@ -113,8 +121,9 @@ li::marker {
         margin: 5px 0;
   }`;
 
-export const TileListItem = styled.li`
+export const TilePortfolioListItem = styled.li`
   margin-left: 0;
+  padding: 10px 0;
   line-height: 1.3;
   color: ${({ theme }) => theme.color.grey};
 
@@ -127,9 +136,3 @@ export const TileListItem = styled.li`
         font-size: 8px;
         margin: 5px 0;
   }`;
-
-export const TileBreak = styled.hr`
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, transparent, #000, transparent);
-`;

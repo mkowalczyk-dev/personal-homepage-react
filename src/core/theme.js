@@ -9,7 +9,8 @@ export const theme = {
     woodsmoke: "#18181B",
     black: "#000000",
     sky: "#D6E4FF",
-    blue: "#0044CCFF",
+    cornflowerBlue: "#4c78ceff",
+    seagull: "#aaccddff"
   },
   breakpoint: {
     beneathFullHD: 1440,

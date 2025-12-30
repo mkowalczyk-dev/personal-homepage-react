@@ -1,8 +1,9 @@
-import { SectionWrapper, Title, Content } from "./styled";
+import { SectionWrapper, Title, Subtitle, Content } from "./styled";
 
-const Section = ({ title, content }) => (
+const Section = ({ title, subtitle, content }) => (
   <SectionWrapper>
     <Title>{title}</Title>
+    <Subtitle>{subtitle}</Subtitle>
     <Content>{content}</Content>
   </SectionWrapper>
 );
