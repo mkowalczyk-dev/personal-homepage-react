@@ -9,12 +9,11 @@ export const TilePortfolioWrapper = styled.div`
   max-width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: auto auto;
         grid-gap: 16px;
         margin-top: 36px;
-        margin-left: -20px;
-        padding: 16px;
         grid-gap: 5px;
+        font-size: 12px;
     }
 `;
 
@@ -26,7 +25,7 @@ export const TilePortfolioTitle = styled.h1`
   color: ${({ theme }) => theme.color.cornflowerBlue};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
-        font-size: 16px;
+        font-size: 12px;
         margin: 5px 0;
   }
   
@@ -77,6 +76,12 @@ export const TilePortfolioContainer = styled.header`
     &:hover {
     border-color: ${({ theme }) => theme.color.seagull};
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+        font-size: 12px;
+        margin: 5px 0;
+        padding: 5px;
+  }
 `
 
 export const TilePortfolioLink = styled.a`
@@ -91,7 +96,7 @@ export const TilePortfolioLink = styled.a`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-        font-size: 14px;
+        font-size: 12px;
         margin: 5px 0;
   }
 
@@ -116,7 +121,7 @@ li::marker {
   line-height: 1.3;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-        font-size: 14px;
+        font-size: 12px;
         margin: 5px 0;
   }
 
@@ -132,7 +137,7 @@ export const TilePortfolioListItem = styled.li`
   color: ${({ theme }) => theme.color.grey};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-        font-size: 14px;
+        font-size: 12px;
         margin: 5px 0;
   }
 
