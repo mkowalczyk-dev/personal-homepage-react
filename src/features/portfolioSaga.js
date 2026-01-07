@@ -6,7 +6,7 @@ import {
 } from "./portfolioSlice";
 
 function fetchPortfolioApi() {
-  return axios.get("https://hirazuku.github.io/My-VR-CV/");
+  yield axios.get("https://hirazuku.github.io/My-VR-CV/");
 }
 
 function* fetchPortfolioSaga() {

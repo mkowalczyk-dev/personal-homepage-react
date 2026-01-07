@@ -14,7 +14,7 @@ const Tile = ({ firstPage }) => {
             <TileContainer>
                 {firstPage === true ? (
                     <>
-                        <TileTitle>My skillset includes:</TileTitle>
+                        <TileTitle>🥷🏻 My skillset includes:</TileTitle>
                         <TileBreak/>
                         <TileList>
                             <TileListItem>Html</TileListItem>
@@ -43,7 +43,7 @@ const Tile = ({ firstPage }) => {
                     </>
                 ) : (
                     <>
-                        <TileTitle>What I want to learn next:</TileTitle>
+                        <TileTitle>💡📗What I want to learn next:</TileTitle>
                         <TileBreak/>
                         <TileList>
                             <TileListItem>typeScript</TileListItem>

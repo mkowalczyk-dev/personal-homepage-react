@@ -7,6 +7,10 @@ export const HeaderWrapper = styled.section`
   grid-template-columns: auto auto;
   justify-items: start;
   text-align: left;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    grid-template-columns: auto;
+  }
 `;
 
 export const HeaderContainer = styled.div`
@@ -54,9 +58,9 @@ export const Content = styled.div`
 `;
 
 export const HeaderImage = styled.div`
-    width: 400px;
-    height: 400px;
-    border-radius: 200px;
+    width: 398px;
+    height: 398px;
+    border-radius: 50%;
     display: flex;
     margin-top: 0;
     margin-right: 50px;
@@ -66,10 +70,9 @@ export const HeaderImage = styled.div`
     background-size: cover;
     justify-self: start;
 
-    @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
-        width: 150px;
-        height: 150px;
-        border-radius: 75px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+        width: 149px;
+        height: 149px;
         margin-left: 0px;
     }
 `;

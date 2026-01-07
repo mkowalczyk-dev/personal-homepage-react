@@ -34,38 +34,9 @@ export const TilePortfolioTitle = styled.h1`
         margin: 5px 0;
   }`;
 
-export const TilePortfolioImage = styled.div`
-  width: 176px;
-  display: block;
-  aspect-ratio: 2 / 3;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center;
-  background-color: transparent;
-  margin: 0 auto 16px auto;
-  background-image: ${({ $posterUrl, $noPosterUrl }) =>
-        `url(${$posterUrl || $noPosterUrl})`};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    aspect-ratio: 2 / 3;
-    margin: 0;
-    width: 135px;
-  }
-
-  @media (max-width: 540px) {
-        width: 140px;
-        background-size: cover;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.horizontalMobile}px) {
-    width: 114px;
-    background-size: cover;
-  }
-`;
-
 export const TilePortfolioContainer = styled.header`
     font-size: 22px;
-    background-color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.colors.background};
     box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
     padding: 20px;
     margin: 20px 0;

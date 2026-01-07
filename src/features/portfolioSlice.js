@@ -1,27 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  portfolio: [],
-  loading: false,
-  error: null,
+  status: "initial",
+  repositories: null,
 };
 
 const portfolioSlice = createSlice({
   name: "portfolio",
   initialState,
   reducers: {
-    fetchPortfolioStart(state, action) {
-      state.loading = true;
-      state.portfolio = action.payload;
-    },
-    fetchPortfolioSuccess(state, action) {
-      state.loading = false;
-      state.portfolio = action.payload;
-    },
-    fetchPortfolioFailure(state, action) {
-      state.loading = false;
-      state.error = action.payload;
-    },
+    fetchPortfolioStart: () => ({
+      status: "loading",
+      repositories: null,
+    }),
+    fetchPortfolioSuccess: (_, { payload: repositories }) => ({
+      status: "success",
+      repositories,
+    }),
+    fetchPortfolioFailure: () => ({
+      status: "error",
+      repositories: null,
+    }),
   },
 });
 
@@ -31,5 +30,10 @@ export const {
   fetchPortfolioFailure,
 } =
   portfolioSlice.actions;
+
+const selectPersonalHomepageState = state => state.portolio;
+
+export const selectRepositories = state => selectPersonalHomepageState(state).repositories;
+export const selectRepositoriesStatus = state => selectPersonalHomepageState(state).status;
 
 export default portfolioSlice.reducer;

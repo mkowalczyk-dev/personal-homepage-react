@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TileWrapper = styled.div`
-background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
   display: grid;
   grid-template-columns: auto;
@@ -29,39 +29,6 @@ export const TileTitle = styled.h1`
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
         font-size: 16px;
         margin: 5px 0;
-  }
-  
-@media (max-width: 540px) {
-        font-size: 8px;
-        margin: 5px 0;
-  }`;
-
-export const TileImage = styled.div`
-  width: 176px;
-  display: block;
-  aspect-ratio: 2 / 3;
-  border-radius: 5px;
-  background-size: cover;
-  background-position: center;
-  background-color: transparent;
-  margin: 0 auto 16px auto;
-  background-image: ${({ $posterUrl, $noPosterUrl }) =>
-    `url(${$posterUrl || $noPosterUrl})`};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    aspect-ratio: 2 / 3;
-    margin: 0;
-    width: 135px;
-  }
-
-  @media (max-width: 540px) {
-        width: 140px;
-        background-size: cover;
-  }
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.horizontalMobile}px) {
-    width: 114px;
-    background-size: cover;
   }
 `;
 
@@ -104,13 +71,13 @@ li::marker {
   line-height: 1.3;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-        font-size: 14px;
         margin: 5px 0;
+        grid-template-columns: 1fr 1fr;
   }
 
 @media (max-width: 540px) {
-        font-size: 8px;
         margin: 5px 0;
+        grid-template-columns: 1fr;
   }`;
 
 export const TileListItem = styled.li`
@@ -124,7 +91,6 @@ export const TileListItem = styled.li`
   }
 
 @media (max-width: 540px) {
-        font-size: 8px;
         margin: 5px 0;
   }`;
 
