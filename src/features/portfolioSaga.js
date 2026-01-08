@@ -1,4 +1,5 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest, delay } from "redux-saga/effects";
+import axios from "axios";
 import {
   fetchPortfolioStart,
   fetchPortfolioSuccess,
@@ -6,22 +7,22 @@ import {
 } from "./portfolioSlice";
 
 function fetchPortfolioApi() {
-  yield axios.get("https://hirazuku.github.io/My-VR-CV/");
+  return axios.get("https://hirazuku.github.io/My-VR-CV/");
 }
 
-function* fetchPortfolioSaga() {
+const loadingDelay = 2000;
+
+function* fetchPortfolioSaga({ payload: username }) {
 
   try {
-    const portfolioResponse = yield call(fetchPortfolioApi);
-
-    const portfolioData = portfolioResponse.data;
-
-    yield put(fetchPortfolioSuccess(portfolioData));
+    yield delay(loadingDelay);
+    const portfolioResponse = yield call(fetchPortfolioApi, username);
+    yield put(fetchPortfolioSuccess(portfolioResponse));
   } catch (error) {
     yield put(fetchPortfolioFailure(error.message));
   }
 }
 
-export function* creditsSaga() {
+export function* portfolioSaga() {
   yield takeLatest(fetchPortfolioStart.type, fetchPortfolioSaga);
 }

@@ -13,6 +13,7 @@ export const Title = styled.h1`
   align-items: center;
   text-align: center;
   margin: 24px 0 24px 0;
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;
@@ -27,6 +28,7 @@ export const Subtitle = styled.h2`
   align-items: center;
   text-align: center;
   margin: 24px 0 24px 0;
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;

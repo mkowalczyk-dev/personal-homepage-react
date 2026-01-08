@@ -26,6 +26,7 @@ export const Title = styled.h1`
   line-height: 1.2;
   align-items: center;
   margin: 24px 0 24px 0;
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;
@@ -39,7 +40,7 @@ export const Subtitle = styled.h2`
   line-height: 1.2;
   align-items: center;
   margin: 24px 0 24px 0;
-  color: ${({ theme }) => theme.color.grey};
+  color: ${({ theme }) => theme.colors.fontAnother};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     font-size: 18px;
@@ -50,7 +51,7 @@ export const Subtitle = styled.h2`
 export const Content = styled.div`
   padding: 0;
   font-size: 24px;
-  color: ${({ theme }) => theme.color.grey};
+  color: ${({ theme }) => theme.colors.fontAnother};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         font-size: 12px;
@@ -80,19 +81,18 @@ export const HeaderImage = styled.div`
 export const Button = styled.button`
     color: ${({ theme }) => theme.color.whisper};
     height: 50px;
+    padding: 12px 16px;
+    font-weight: 600;
     font-size: 20px;
     margin: 20px 0;
-    border: none;
+    border: 1px solid;
     border-radius: 5px;
-    padding: 10px;
-    background-color: ${({ theme }) => theme.color.cornflowerBlue};
+    transition: 0.3s;
+    background-color: ${({ theme }) => theme.color.scienceBlue};
 
-    &:hover{
-        color: ${({ theme }) => theme.color.white};
-        background-color: blue;
-        scale: 1.1;
-        transition: 0.3s;
+    &:hover {
         cursor: pointer;
+        box-shadow: 0 0 2px 2px ${({ theme }) => theme.color.blumine};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {

@@ -8,9 +8,12 @@ const theme = {
     shadow: "#BAC7D580",
     woodsmoke: "#18181B",
     black: "#000000",
+    mineShaft: "#252525",
     sky: "#D6E4FF",
-    cornflowerBlue: "#4c78ceff",
+    scienceBlue: "#0366D6",
+    blumine: "#2188FF",
     seagull: "#aaccddff",
+    boulder: "#757575",
   },
   breakpoint: {
     tabletHorizontal: 1199,
@@ -22,15 +25,20 @@ const theme = {
 export const themeLight = {
   ...theme,
   colors: {
-    color: theme.color.black,
+    font: theme.color.black,
+    fontAnother: theme.color.grey,
     background: theme.color.white,
+    border: theme.color.whisper,
   },
 };
 
 export const themeDark = {
   ...theme,
   colors: {
-    color: theme.color.white,
-    background: theme.color.black,
+    font: theme.color.white,
+    fontAnother: theme.color.white,
+    background: theme.color.mineShaft,
+    tileBackground: theme.color.boulder,
+    border: theme.color.shadow,
   },
 };

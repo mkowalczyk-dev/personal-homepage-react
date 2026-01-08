@@ -23,7 +23,7 @@ export const TilePortfolioTitle = styled.h1`
   font-size: 24px;
   font-weight: 900;
   text-align: start;
-  color: ${({ theme }) => theme.color.cornflowerBlue};
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
         font-size: 12px;
@@ -37,12 +37,12 @@ export const TilePortfolioTitle = styled.h1`
 
 export const TilePortfolioContainer = styled.header`
     font-size: 22px;
-    background-color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.tileBackground};
     box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
     padding: 20px;
     margin: 20px 0;
     border-style: solid;
-    border-color: ${({ theme }) => theme.color.whisper};
+    border-color: ${({ theme }) => theme.colors.border};
     border-width: 5px;
 
     &:hover {
@@ -61,7 +61,7 @@ export const TilePortfolioLink = styled.a`
   line-height: 1.3;
   font-weight: 500;
   padding-left: 5px;
-  color: ${({ theme }) => theme.color.cornflowerBlue};
+  color: ${({ theme }) => theme.colors.cornflowerBlue};
 
   &:hover {
     color: blue;
@@ -106,7 +106,7 @@ export const TilePortfolioListItem = styled.li`
   margin-left: 0;
   padding: 10px 0;
   line-height: 1.3;
-  color: ${({ theme }) => theme.color.grey};
+  color: ${({ theme }) => theme.colors.fontAnother};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         font-size: 12px;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TileWrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.tileBackground};
   transition: 0.3s;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
   display: grid;
@@ -26,6 +26,7 @@ export const TileTitle = styled.h1`
   font-size: 24px;
   font-weight: 900;
   text-align: start;
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
         font-size: 16px;
@@ -44,7 +45,7 @@ export const TileName = styled.h2`
   font-size: 22px;
   line-height: 1.3;
   font-weight: 500;
-  color: ${({ theme }) => theme.color.woodsmoke};
+  color: ${({ theme }) => theme.colors.font};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         font-size: 14px;
@@ -84,7 +85,7 @@ li::marker {
 export const TileListItem = styled.li`
   margin-left: 0;
   line-height: 1.3;
-  color: ${({ theme }) => theme.color.grey};
+  color: ${({ theme }) => theme.colors.fontAnother};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         font-size: 14px;

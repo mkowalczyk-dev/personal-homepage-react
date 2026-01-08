@@ -15,12 +15,26 @@ export const IconWrapper = styled.div`
     align-items: center;
 `;
 
+export const styledIcon = Icon => styled(Icon)`
+    width: 50px;
+    height: 50px;
+    fill: ${({ theme }) => theme.colors.font};
+    
+    &:hover {
+      fill: ${({ theme }) => theme.color.scienceBlue};
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+    height: 30px;
+  }`
+
 export const GithubIcon = styled(githubIcon)`
     width: 50px;
     height: 50px;
+    fill: ${({ theme }) => theme.colors.font};
     
     &:hover {
-      fill: ${({ theme }) => theme.color.cornflowerBlue};
+      fill: ${({ theme }) => theme.color.scienceBlue};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -31,9 +45,10 @@ export const GithubIcon = styled(githubIcon)`
 export const FacebookIcon = styled(facebookIcon)`
     width: 60px;
     height: 60px;
+    fill: ${({ theme }) => theme.colors.font};
 
     &:hover {
-      fill: ${({ theme }) => theme.color.cornflowerBlue};
+      fill: ${({ theme }) => theme.color.scienceBlue};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -44,9 +59,10 @@ export const FacebookIcon = styled(facebookIcon)`
 export const LinkedinIcon = styled(linkedinIcon)`
     width: 52px;
     height: 52px;
+    fill: ${({ theme }) => theme.colors.font};
 
     &:hover {
-      fill: ${({ theme }) => theme.color.cornflowerBlue};
+      fill: ${({ theme }) => theme.color.scienceBlue};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
@@ -58,9 +74,10 @@ export const InstagramIcon = styled(instagramIcon)`
     width: 52px;
     height: 52px;
     margin-left: 3px;
+    fill: ${({ theme }) => theme.colors.font};
 
     &:hover {
-      fill: ${({ theme }) => theme.color.cornflowerBlue};
+      fill: ${({ theme }) => theme.color.scienceBlue};
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {

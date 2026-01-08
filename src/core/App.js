@@ -12,8 +12,10 @@ import {
   FacebookIcon,
   LinkedinIcon,
   InstagramIcon,
+  styledIcon,
   IconLink
 } from "../common/Icons/styled";
+import { ReactComponent as githubIcon } from "../assets/github-icon.svg";
 import { ThemeProvider } from "styled-components";
 import { themeDark, themeLight } from "../core/theme";
 import { GlobalStyle } from "../core/GlobalStyle";
@@ -23,7 +25,11 @@ import { selectIsDarkTheme } from '../features/themeSlice';
 function App() {
 
   const isDarkTheme = useSelector(selectIsDarkTheme);
-
+  const socials = {
+    name: "GitHub",
+    url: "https://github.com/repos",
+    Icon: styledIcon(githubIcon),
+  }
   const handleClickGithub = () => {
     window.location.href = "https://github.com/repos";
   };
