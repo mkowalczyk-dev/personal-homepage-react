@@ -1,5 +1,5 @@
 import { HashRouter } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Container } from "../common/Container/styled";
 import { ThemeSwitch } from "../common/ThemeSwitch/index";
 import Header from "../common/Header/index";
@@ -15,6 +15,8 @@ import {
   styledIcon,
   IconLink
 } from "../common/Icons/styled";
+import { useEffect } from "react";
+import { fetchPortfolioStart } from "../features/portfolioSlice";
 import { ReactComponent as githubIcon } from "../assets/github-icon.svg";
 import { ThemeProvider } from "styled-components";
 import { themeDark, themeLight } from "../core/theme";
@@ -45,6 +47,13 @@ function App() {
   const handleClickInstagram = () => {
     window.location.href = "https://www.instagram.com/wahasaku/";
   };
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(fetchPortfolioStart());
+    }
+  , [dispatch]);
 
   return (
     <ThemeProvider theme={isDarkTheme ? themeDark : themeLight}>

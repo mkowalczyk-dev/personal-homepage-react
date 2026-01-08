@@ -5,10 +5,7 @@ import {
   fetchPortfolioSuccess,
   fetchPortfolioFailure,
 } from "./portfolioSlice";
-
-function fetchPortfolioApi() {
-  return axios.get("https://hirazuku.github.io/My-VR-CV/");
-}
+import { getRepositories } from "./portfolioApi";
 
 const loadingDelay = 2000;
 
@@ -16,7 +13,7 @@ function* fetchPortfolioSaga({ payload: username }) {
 
   try {
     yield delay(loadingDelay);
-    const portfolioResponse = yield call(fetchPortfolioApi, username);
+    const portfolioResponse = yield call(getRepositories, username);
     yield put(fetchPortfolioSuccess(portfolioResponse));
   } catch (error) {
     yield put(fetchPortfolioFailure(error.message));
