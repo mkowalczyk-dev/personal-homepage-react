@@ -6,10 +6,10 @@ export const Content = ({ status, repositories }) => {
             return null;
 
         case "loading":
-            return;
+            return null;
 
         case "error":
-            return;
+            return null;
 
         case "success":
             return <Repositories repositories={repositories} />;
