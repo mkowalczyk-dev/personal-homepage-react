@@ -1,21 +1,15 @@
 import styled from "styled-components";
-import { ReactComponent as githubIcon } from "../../assets/github-icon.svg";
+import { ReactComponent as githubIcon } from "../../../assets/github-icon.svg";
 
 export const IconWrapper = styled.li`
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
     width: 42px;
     height: 42px;
     margin-bottom: 40px;
-    margin-left: 0;
     justify-content: baseline;
     align-items: center;
-    max-width: 100%;
-
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-            margin-right: 16px;
-        }
 `;
 
 export const IconItem = styled.li`
@@ -46,7 +40,6 @@ export const styledIcon = Icon => styled(Icon)`
 export const GithubIcon = styled(githubIcon)`
     width: 50px;
     height: 50px;
-    fill: ${({ theme }) => theme.color.scienceBlue};
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     height: 30px;

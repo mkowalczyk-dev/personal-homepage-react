@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TileWrapper = styled.div`
+export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.tileBackground};
   transition: 0.3s;
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
@@ -13,53 +13,17 @@ export const TileWrapper = styled.div`
   font-size: 20px;
   max-width: 100%;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
-        grid-template-columns: 1fr;
-        grid-gap: 16px;
-        margin-top: 36px;
-        padding: 16px;
-    }
-`;
-
-export const TileTitle = styled.h1`
-  margin: 18px 0;
-  font-size: 24px;
-  font-weight: 900;
-  text-align: start;
-  color: ${({ theme }) => theme.colors.font};
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletLandscape}px) {
-        font-size: 16px;
-        margin: 5px 0;
-  }
-`;
-
-export const TileContainer = styled.header`
-    font-size: 22px;
-`
-
-export const TileName = styled.h2`
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  font-size: 22px;
-  line-height: 1.3;
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors.font};
-
   @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-        font-size: 14px;
-        margin: 5px 0;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    margin-top: 36px;
+    padding: 16px;
   }
+`;
 
-@media (max-width: 540px) {
-        font-size: 8px;
-        margin: 5px 0;
-  }`;
-
-export const TileList = styled.ul`
+export const List = styled.ul`
 li::marker {
-    color: ${({ theme }) => theme.color.cornflowerBlue};
+    color: ${({ theme }) => theme.color.scienceBlue};
   }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -82,7 +46,7 @@ li::marker {
         grid-template-columns: 1fr;
   }`;
 
-export const TileListItem = styled.li`
+export const Item = styled.li`
   margin-left: 0;
   line-height: 1.3;
   color: ${({ theme }) => theme.colors.fontAnother};
@@ -96,7 +60,21 @@ export const TileListItem = styled.li`
         margin: 5px 0;
   }`;
 
-export const TileBreak = styled.hr`
+export const Title = styled.h1`
+  margin: 18px 0;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: start;
+  color: ${({ theme }) => theme.colors.font};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+        font-size: 16px;
+        margin: 5px 0;
+  }
+`;
+
+export const Break = styled.hr`
+  width: 100%;
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, transparent, #000, transparent);

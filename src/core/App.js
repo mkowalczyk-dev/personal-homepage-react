@@ -4,9 +4,10 @@ import { Container } from "../common/Container/styled";
 import { ThemeSwitch } from "../common/ThemeSwitch/index";
 import Header from "../common/Header/index";
 import Section from "../common/Section";
-import Tile from "../common/Tile/index";
-import { GithubIcon } from "../common/Icons/styled";
-import { SocialMediaIcons } from "../common/Icons/index";
+import { Skills } from "../features/Portfolio/Skills/index";
+import { skills, nextSkills } from "../features/Portfolio/skillsData";
+import { GithubIcon } from "../features/Portfolio/Icons/styled";
+import { SocialMediaIcons } from "../features/Portfolio/Icons/index";
 import { ThemeProvider } from "styled-components";
 import { themeDark, themeLight } from "../core/theme";
 import { GlobalStyle } from "../core/GlobalStyle";
@@ -33,13 +34,11 @@ function App() {
           />
           <Section
             content={
-              <Tile
-                firstPage={true} />}
+              <Skills title="🥷🏻 My skillset includes:" skills={skills} />}
           />
           <Section
             content={
-              <Tile
-                firstPage={false} />}
+              <Skills title="💡📗What I want to learn next:" skills={nextSkills} />}
           />
           <GithubIcon />
           <Section

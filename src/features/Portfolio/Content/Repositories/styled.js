@@ -11,7 +11,7 @@ export const List = styled.ul`
   list-style-type: none;
   padding: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.tabletHorizontalMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         grid-template-columns: 1fr;
         grid-gap: 16px;
         margin-top: 36px;
@@ -96,7 +96,7 @@ export const LinksValue = styled.dd`
 export const Link = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.primary};
-  border-bottom: 1px solid ${({ theme }) => (theme.colors.primary, 0.3)};
+  border-bottom: 1px solid ${({ theme }) => (theme.colors.primary)};
   padding-bottom: 1px;
 
   &:hover {
