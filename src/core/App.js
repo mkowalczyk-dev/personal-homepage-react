@@ -1,11 +1,10 @@
 import { HashRouter } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Container } from "../common/Container/styled";
 import { ThemeSwitch } from "../common/ThemeSwitch/index";
 import Header from "../common/Header/index";
 import Section from "../common/Section";
 import Tile from "../common/Tile/index";
-import TilePortfolio from "../common/TilePortfolio/index";
 import {
   IconWrapper,
   GithubIcon,
@@ -15,15 +14,13 @@ import {
   styledIcon,
   IconLink
 } from "../common/Icons/styled";
-import { useEffect } from "react";
-import { fetchPortfolioStart } from "../features/portfolioSlice";
 import { ReactComponent as githubIcon } from "../assets/github-icon.svg";
 import { ThemeProvider } from "styled-components";
 import { themeDark, themeLight } from "../core/theme";
 import { GlobalStyle } from "../core/GlobalStyle";
 import { Normalize } from "styled-normalize";
 import { selectIsDarkTheme } from '../features/themeSlice';
-import { githubUsername } from "../features/portfolioApi";
+import { Portfolio } from "../features/Portfolio/index";
 
 function App() {
 
@@ -49,21 +46,13 @@ function App() {
     window.location.href = "https://www.instagram.com/wahasaku/";
   };
 
-  const dispatch = useDispatch();
-
-
-  useEffect(() => {
-      dispatch(fetchPortfolioStart(githubUsername));
-    }
-  , [dispatch]);
-
   return (
     <ThemeProvider theme={isDarkTheme ? themeDark : themeLight}>
       <Normalize />
       <GlobalStyle />
       <HashRouter>
         <Container>
-          <ThemeSwitch />
+          <Section content={<ThemeSwitch />} />
           <Header
             header={true}
             subtitle="This is "
@@ -87,7 +76,7 @@ function App() {
             title="Portfolio"
             subtitle="My recent projects"
             content={<>
-              <TilePortfolio />
+              <Portfolio />
             </>
             }
           />

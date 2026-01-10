@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const githubAPIBaseURL = "https://api.github.com";
+export const githubAPIBaseURL = "https://api.github.com";
 export const githubUsername = "Hirazuku";
 
 export const getRepositories = username =>

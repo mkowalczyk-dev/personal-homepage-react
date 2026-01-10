@@ -16,8 +16,8 @@ const theme = {
     boulder: "#757575",
   },
   breakpoint: {
-    tabletHorizontal: 1199,
-    tabletVertical: 991,
+    tabletHorizontalMax: 1199,
+    tabletVerticalMax: 991,
     mobile: 767,
   },
 };

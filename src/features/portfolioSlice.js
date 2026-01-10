@@ -31,9 +31,9 @@ export const {
 } =
   portfolioSlice.actions;
 
-const selectPersonalHomepageState = state => state.portolio;
+const selectPortfolioState = state => state.portolio;
 
-export const selectRepositories = state => selectPersonalHomepageState(state).repositories;
-export const selectRepositoriesStatus = state => selectPersonalHomepageState(state).status;
+export const selectRepositories = (state) => state.portfolio?.repositories;
+export const selectRepositoriesStatus = (state) => state.portfolio?.status;
 
 export default portfolioSlice.reducer;

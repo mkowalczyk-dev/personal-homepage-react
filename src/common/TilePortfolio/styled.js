@@ -42,7 +42,7 @@ export const TilePortfolioContainer = styled.header`
     padding: 20px;
     margin: 20px 0;
     border-style: solid;
-    border-color: ${({ theme }) => theme.colors.border};
+    border-color: ${({ theme }) => theme.colors.font};
     border-width: 5px;
 
     &:hover {

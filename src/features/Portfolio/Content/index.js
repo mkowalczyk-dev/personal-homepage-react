@@ -1,4 +1,6 @@
 import { Repositories } from "./Repositories/index";
+import { Loading } from "./Loading/index";
+import { ErrorBox } from "./ErrorBox/index";
 
 export const Content = ({ status, repositories }) => {
     switch (status) {
@@ -6,10 +8,10 @@ export const Content = ({ status, repositories }) => {
             return null;
 
         case "loading":
-            return null;
+            return <Loading />;
 
         case "error":
-            return null;
+            return <ErrorBox />;
 
         case "success":
             return <Repositories repositories={repositories} />;
