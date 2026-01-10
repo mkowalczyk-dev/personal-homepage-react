@@ -1,18 +1,33 @@
 import styled from "styled-components";
 import { ReactComponent as githubIcon } from "../../assets/github-icon.svg";
-import { ReactComponent as facebookIcon } from "../../assets/facebook-icon.svg";
-import { ReactComponent as linkedinIcon } from "../../assets/linkedin-icon.svg";
-import { ReactComponent as instagramIcon } from "../../assets/instagram-icon.svg";
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.li`
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 30px;
     width: 42px;
     height: 42px;
-    margin-left: 3px;
     margin-bottom: 40px;
+    margin-left: 0;
+    justify-content: baseline;
     align-items: center;
+    max-width: 100%;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+            margin-right: 16px;
+        }
+`;
+
+export const IconItem = styled.li`
+    list-style-type: none;
+    margin: 0;
+    &:not(:last-child) {
+        margin-right: 24px;
+
+        @media(max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+            margin-right: 16px;
+        }
+    }
 `;
 
 export const styledIcon = Icon => styled(Icon)`
@@ -31,61 +46,15 @@ export const styledIcon = Icon => styled(Icon)`
 export const GithubIcon = styled(githubIcon)`
     width: 50px;
     height: 50px;
-    fill: ${({ theme }) => theme.colors.font};
-    
-    &:hover {
-      fill: ${({ theme }) => theme.color.scienceBlue};
-    }
+    fill: ${({ theme }) => theme.color.scienceBlue};
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
     height: 30px;
   }
 `;
 
-export const FacebookIcon = styled(facebookIcon)`
-    width: 60px;
-    height: 60px;
-    fill: ${({ theme }) => theme.colors.font};
-
-    &:hover {
-      fill: ${({ theme }) => theme.color.scienceBlue};
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    height: 30px;
-  }
-`;
-
-export const LinkedinIcon = styled(linkedinIcon)`
-    width: 52px;
-    height: 52px;
-    fill: ${({ theme }) => theme.colors.font};
-
-    &:hover {
-      fill: ${({ theme }) => theme.color.scienceBlue};
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    height: 30px;
-  }
-`;
-
-export const InstagramIcon = styled(instagramIcon)`
-    width: 52px;
-    height: 52px;
-    margin-left: 3px;
-    fill: ${({ theme }) => theme.colors.font};
-
-    &:hover {
-      fill: ${({ theme }) => theme.color.scienceBlue};
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
-    height: 30px;
-  }
-`;
-
-export const IconLink = styled.div`
+export const IconLink = styled.a`
+    display: block;
 
     &:hover {
       cursor: pointer;
