@@ -35,7 +35,7 @@ export const Tile = styled.li`
     border-color: ${({ theme }) => theme.color.seagull};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletVerticalMax}px) {
         font-size: 12px;
         margin: 5px 0;
         padding: 5px;
