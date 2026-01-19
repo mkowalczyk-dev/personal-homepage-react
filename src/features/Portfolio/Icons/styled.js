@@ -28,6 +28,7 @@ export const styledIcon = Icon => styled(Icon)`
     width: 50px;
     height: 50px;
     fill: ${({ theme }) => theme.colors.font};
+    transition: 0.3s;
     
     &:hover {
       fill: ${({ theme }) => theme.color.scienceBlue};

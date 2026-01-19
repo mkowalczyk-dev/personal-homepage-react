@@ -31,6 +31,7 @@ grid-template-rows: 1fr;
     border-style: solid;
     border-color: ${({ theme }) => theme.colors.border};
     border-width: 5px;
+    transition: 0.3s;
 
     &:hover {
     border-color: ${({ theme }) => theme.color.seagull};
