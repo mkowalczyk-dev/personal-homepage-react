@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div`
   text-align: left;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.a`
   font-weight: 900;
   font-size: 42px;
   line-height: 1.2;
@@ -33,6 +33,16 @@ export const Title = styled.h1`
     margin: 4px 0 12px 0;
   }
 `;
+
+export const StyledTitle = styled(Title)`
+    text-decoration: none;
+    transition: 0.3s;
+
+&:hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.color.scienceBlue};
+    }
+`
 
 export const Subtitle = styled.h2`
   font-weight: 600;
@@ -84,8 +94,11 @@ export const HeaderImage = styled.div`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
     color: ${({ theme }) => theme.color.whisper};
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
     height: 50px;
     padding: 12px 16px;
     font-weight: 600;

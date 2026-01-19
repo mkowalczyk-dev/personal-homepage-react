@@ -3,16 +3,13 @@ import {
     HeaderContainer,
     HeaderImage,
     Title,
+    StyledTitle,
     Subtitle,
     Content,
     Button
 } from "./styled";
 
-const Header = ({ title, subtitle, content, header }) => {
-
-  const handleClick = () => {
-   window.location.href = "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqWhHLxSzDCngBPrvnBMwhVxTPPZBxHhgkvNjDwgrTKzjpWbcQvpbrVXmRKNwXFznBmKsB";
-  };
+const HeaderFooter = ({ title, subtitle, content, header }) => {
 
   return (
     <HeaderWrapper>
@@ -20,14 +17,15 @@ const Header = ({ title, subtitle, content, header }) => {
         <HeaderImage $posterUrl={"https://i.postimg.cc/PJ658KhS/profile-picture.jpg"} />)}
         <HeaderContainer>
             <Subtitle>{subtitle}</Subtitle>
-            <Title>{title}</Title>
+            {header === true ? 
+            (<Title>{title}</Title>) 
+            : (<StyledTitle href={"mailto: michalkowal3k@gmail.com"} title={"michalkowal3k@gmail.com"}>{title}</StyledTitle>)}
             <Content>{content}</Content>
             {header === true && (
-            <Button
-                onClick={handleClick}>
+            <Button href={"mailto: michalkowal3k@gmail.com"} title={"michalkowal3k@gmail.com"}>
                 ✉ Hire me</Button>)}
         </HeaderContainer>
     </HeaderWrapper>
 )};
 
-export default Header;
+export default HeaderFooter;

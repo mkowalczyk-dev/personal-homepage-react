@@ -2,7 +2,7 @@ import { HashRouter } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Container } from "../common/Container/styled";
 import { ThemeSwitch } from "../common/ThemeSwitch/index";
-import Header from "../common/Header/index";
+import HeaderFooter from "../common/HeaderFooter/index";
 import Section from "../common/Section";
 import { Skills } from "../features/Portfolio/Skills/index";
 import { skills, nextSkills } from "../features/Portfolio/skillsData";
@@ -12,7 +12,7 @@ import { ThemeProvider } from "styled-components";
 import { themeDark, themeLight } from "../core/theme";
 import { GlobalStyle } from "../core/GlobalStyle";
 import { Normalize } from "styled-normalize";
-import { selectIsDarkTheme } from '../features/themeSlice';
+import { selectIsDarkTheme } from '../common/themeSlice';
 import { Portfolio } from "../features/Portfolio/index";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       <HashRouter>
         <Container>
           <Section content={<ThemeSwitch />} />
-          <Header
+          <HeaderFooter
             header={true}
             subtitle="This is "
             title="Michał Kowalczyk"
@@ -49,7 +49,7 @@ function App() {
             </>
             }
           />
-          <Header
+          <HeaderFooter
             header={false}
             subtitle="Let's talk! "
             title="michalkowal3k@gmail.com"
