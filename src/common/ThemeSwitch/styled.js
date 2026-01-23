@@ -55,7 +55,7 @@ export const Icon = styled(darkmodeIcon)`
     transition: 0.3s;
     fill: ${({ theme }) => theme.colors.font};
 
-    ${({ moveToRight }) => moveToRight && css`
+    ${({ $moveToRight }) => $moveToRight && css`
     transform: translateX(20px);
     
     `}

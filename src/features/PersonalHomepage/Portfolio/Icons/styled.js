@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as githubIcon } from "../../../../assets/github-icon.svg";
 
-export const IconWrapper = styled.li`
+export const IconWrapper = styled.ul`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
@@ -10,6 +10,9 @@ export const IconWrapper = styled.li`
     margin-bottom: 40px;
     justify-content: baseline;
     align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 `;
 
 export const IconItem = styled.li`
