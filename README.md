@@ -4,7 +4,7 @@ A collection of all my projects in one place
 
 ## Demo
 
-Here is the link for Demo: https://hirazuku.github.io/personal-homepage-react/
+Here is the link for Demo: https://mkowalczyk-dev.github.io/personal-homepage-react/
 
 ![animation](src/assets/Animation.gif)
 
