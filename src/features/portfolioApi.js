@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const githubAPIBaseURL = "https://api.github.com";
-export const githubUsername = "Hirazuku";
+export const githubUsername = "mkowalczyk-dev";
 
 export const getRepositories = (username) => {
   return Promise.all([
