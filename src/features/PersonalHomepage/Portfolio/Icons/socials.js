@@ -17,7 +17,7 @@ export const socials = [
     },
     {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/Hirazuku",
+        url: "https://www.linkedin.com/in/micha%C5%82-kowalczyk-b145213a7/",
         Icon: styledIcon(linkedinIcon),
     },
     {
