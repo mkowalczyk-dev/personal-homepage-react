@@ -37,7 +37,7 @@ export const PersonalHomepage = () => (
         <HeaderFooter
             header={false}
             subtitle="Let's talk! "
-            title="michalkowal3k@gmail.com"
+            title="michal97kowalczyk@gmail.com"
             content="I'm ready for new job opportunities as soon as possible, I'm waiting for new challenges and endless improvement, so you can contact me anytime!"
         />
         <Section content={

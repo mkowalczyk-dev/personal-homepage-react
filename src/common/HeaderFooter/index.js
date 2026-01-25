@@ -19,10 +19,10 @@ const HeaderFooter = ({ title, subtitle, content, header }) => {
             <Subtitle>{subtitle}</Subtitle>
             {header === true ? 
             (<Title>{title}</Title>) 
-            : (<StyledTitle href={"mailto: michalkowal3k@gmail.com"} title={"michalkowal3k@gmail.com"}>{title}</StyledTitle>)}
+            : (<StyledTitle href={"mailto: michal97kowalczyk@gmail.com"} title={"michal97kowalczyk@gmail.com"}>{title}</StyledTitle>)}
             <Content>{content}</Content>
             {header === true && (
-            <Button href={"mailto: michalkowal3k@gmail.com"} title={"michalkowal3k@gmail.com"}>
+            <Button href={"mailto: michal97kowalczyk@gmail.com"} title={"michal97kowalczyk@gmail.com"}>
                 ✉ Hire me</Button>)}
         </HeaderContainer>
     </HeaderWrapper>
