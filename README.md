@@ -12,8 +12,6 @@ A collection of all my projects in one place
 
 # Description (What is this app made for?) 🧐
 
-## Demo
-
 Here is the link for Demo: https://mkowalczyk-dev.github.io/personal-homepage-react/
 
 ![animation](src/assets/Animation.gif)
