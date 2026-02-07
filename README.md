@@ -10,6 +10,7 @@ A collection of all my projects in one place
 * [How to use](#how-to-use)
 * [Authors](#authors)
 
+<a name="description"></a>
 ## Description (What is this app made for?) 🧐
 
 Here is the link for Demo: https://mkowalczyk-dev.github.io/personal-homepage-react/
@@ -18,6 +19,7 @@ Here is the link for Demo: https://mkowalczyk-dev.github.io/personal-homepage-re
 
 This app contains all my individual projects and those I contributed to in other repositories. This way, you don't have to search for them elsewhere; you can access each one via a demo or repo link. It is intended to support my CV and works as my portfolio.
 
+<a name="functions"></a>
 ## Functions (What does it do?) 💻
 
 This application has only one page, and it's very simple and clear. Only the portfolio element changes depending on whether projects can be downloaded from the repositories. There are several links, such as Gmail links addressed directly to me and icons for my social media.
@@ -29,10 +31,12 @@ This application has only one page, and it's very simple and clear. Only the por
 - ⚛️ React,
 - 🟦 TypeScript 
 
+<a name="how-to-use"></a>
 ## How to use 📎
 
 Using this app is very simple – just scroll down and click one of the links to a demo or repo, downloaded directly from my repository and the repositories of people I've collaborated with. This way, you can see what I've created so far, and the list is always up to date. You can also contact me via the links to my email and social media. You can apply dark mode using the button at the top.
 
+<a name="authors"></a>
 ## Authors ✒️
 
 **Michał Kowalczyk** - [GitHub profile](https://github.com/mkowalczyk-dev)
